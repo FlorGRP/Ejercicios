@@ -1,23 +1,11 @@
-let boton = document.querySelector("button")
-boton.addEventListener("click",hacerClick)
-let body =document.querySelector("body")
+/*Eventos Default: Son comportamientos con los que ya 
+vienen algunos nodos en determinados eventos*/
 
-function hacerClick{
-
-    let div = document.createElement("div") 
-    let p = document.createElement("p")
-    p.innerText ="Lorem Ipsum"
-    let bton = document.createElement("button")
-    bton.innerText = "Borrar"
-
-    bton.addEventListener("click",borrar)
-    body.insertBefore(div,boton)
-    div.appendChild(p)
-    div.appendChild(bton)
-
-    function borrar{
-        div.removeChild(p)
-    }
-
+let a =document.querySelector("a")
+a.addEventListener("click", clickdea)
+function clickdea (e){
+    //Event.preventDefault(): Detiene el comportamiento
+    //por default de cualquier nodo
+    e.preventDefault()
+    console.log("click de a!")
 }
-
